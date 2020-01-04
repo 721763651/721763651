@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Document</title>
+		<style>
+			.box {
+				width: 200px;
+				height: 100px;
+				border: 1px solid red;
+				margin: 0 auto;
+			}
+			img{
+					width: 200px;
+					height: 50px;
+				}
+		</style>
+	</head>
+	<body>
+		<div class="box"></div>
+		<img id="test1" ondragstart="drag(event)" draggable="true" src="./16.jpg" alt="" />
+		<img id="test2" ondragstart="drag(event)" draggable="true" src="./16.jpg" alt="" />
+		<script>
+			// 监听 拖动事件
+			// document.querySelector("#test").ondragstart = function(event) {
+			// 	// console.log(event);
+			// 	// 设置传输数据
+			// 	event.dataTransfer.setData("Text", event.target.id);
+			// };
+			function drag(event) {
+				event.dataTransfer.setData("Text", event.target.id);
+			}
+
+			// 监听 拖到某个元素上
+			document.querySelector(".box").ondragover = function(event) {
+				event.preventDefault();
+				// console.log("over", event);
+			};
+			// 监听 放事件
+			document.querySelector(".box").ondrop = function(event) {
+				console.log("drop", event.dataTransfer.getData("Text"), event);
+				this.appendChild(document.getElementById(event.dataTransfer.getData("Text")));
+			};
+        </script>
+        
+        <!-- http://www.jq22.com/yanshi1680 -->
+	</body>
+</html>

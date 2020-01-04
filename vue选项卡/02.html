@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<style>
+    #sb {
+        width: 150px;
+        height: 150px;
+        margin: 0 auto;
+        position: relative;
+    }
+    span{
+        border-radius:7px;
+        width:40px;
+        height: 20px;
+        background: seagreen;
+        font-size: 10px;
+        display: inline-block;
+        text-align: center;
+        line-height: 20px;
+        margin: 3px;
+    }
+
+    .box {
+        width: 150px;
+        height: 150px;
+        background: rgb(0, 139, 139);
+        position: absolute;
+        top: 30px;
+        left: 0;
+    }
+
+    .box1 {
+        width: 150px;
+        height: 150px;
+        background: rgb(139, 102, 0);
+        position: absolute;
+        top: 30px;
+        left: 0;
+    }
+
+    .box2 {
+        width: 150px;
+        height: 150px;
+        background: rgb(0, 139, 35);
+        position: absolute;
+        top: 30px;
+        left: 0;
+    }
+    img{
+        width: 100%;
+        height: 100%;
+    }
+</style>
+
+<body>
+    <div id="sb">
+        <span v-on:click="hhhsh">点击1</span>
+        <span v-on:click="hhhss">点击2</span>
+        <span v-on:click="hhsss">点击3</span>
+        <div class="box" v-if="ssss"><img src="./img/bj11.jpg" alt=""></div>
+        <div class="box1" v-if="slsl"><img src="./img/bj14.jpg" alt=""></div>
+        <div class="box2" v-if="sbsb"><img src="./img/QQ图片20191119135908.jpg" alt=""></div>
+    </div>
+    <script>
+        var sb = new Vue({
+            el: "#sb",
+            data: {
+                ssss: true,
+                slsl: false,
+                sbsb: false,
+            },
+            methods: {
+                hhhsh: function () {
+                    this.ssss = true,
+                        this.slsl = false,
+                        this.sbsb = false
+                       
+                },
+                hhhss: function () {
+                    this.ssss = false,
+                        this.slsl = true,
+                        this.sbsb = false
+                      
+                },
+                hhsss: function () {
+                    this.ssss = false,
+                        this.slsl = false,
+                        this.sbsb = true
+                        
+                }
+            }
+
+        })
+
+    </script>
+</body>
+
+</html>

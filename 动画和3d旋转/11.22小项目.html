@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css3/11.22小项目.css">
+    <script src="https://cdn.staticfile.org/jquery/1.12.4/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="bth">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <!-- 第一个项目 -->
+    <div class="options">
+        <div class="roundness">
+            <ul>
+                <li class="fl"></li>
+                <li class="jz"></li>
+                <li class="fr"></li>
+            </ul>
+            <div class="roundnesssvg">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                    <line x1="30" y1="50" x2="70" y2="50" style="stroke:white;stroke-width:4;" />
+                    <line x1="50" y1="30" x2="50" y2="70" style="stroke:white;stroke-width:4;" />
+                </svg>
+            </div>
+
+        </div>
+    </div>
+    <!-- // 幽灵按钮 -->
+    <div class="backbth">
+        <div class="wire"></div>
+        <!-- 车 -->
+        <div class="car">
+            <div class="carhead">
+                <div class="carbody"></div>
+                <div class="carlightfl"></div>
+                <div class="carlightfr"></div>
+                <div class="carwindow">
+                    <div class="navcar"></div>
+                </div>
+            </div>
+        </div>
+        <p>点击加载</p>
+        <div class="pfr">加载完成</div>
+        <!-- 车 -->
+    </div>
+    <!-- 汽车按钮 -->
+    <!-- 翻牌子 -->
+    <div class="content">
+        <div class="contentfll">
+            <div class="contentfl">
+                <h1>低级</h1>
+                <div class="kais">选择</div>
+            </div>
+        </div>
+        <div class="contentflll">
+            <div class="contentfll">
+                <h1>中级</h1>
+                <div class="kais">选择</div>
+            </div>
+        </div>
+        <div class="contentfllll">
+            <div class="contentflll">
+                <h1>高级</h1>
+                <div class="kais">选择</div>
+            </div>
+        </div>
+    </div>
+    <!-- 翻牌子 -->
+    <!-- 汽车缓存 -->
+    <div class="cache">
+        <div class="cachecai">
+            <div class="cair">
+                <div class="cairheadstock">
+                    <div class="cairdoor"></div>
+                    <div class="cairdoorfr"></div>
+                    <div class="cairwindow"></div>
+                </div>
+                <div class="cairguard">
+                    <div class="cairbar"></div>
+                    <div class="cairlamp"></div>
+                </div>
+                <div class="cairFrame">
+                    <div class="cairFrametg"></div>
+                    <div class="cairFramehd"></div>
+                </div>
+                 <!-- 车轮 -->
+                <div class="cairwheelfl">
+                    <div class="cairwheelflls"></div>
+                    <div class="cairwheelflyyk"></div>
+                </div>
+                <div class="cairwheelfr">
+                    <div class="cairwheelfrls"></div>
+                    <div class="cairwheelfryyk"></div>
+                   
+                </div>
+                <!-- 车厢 -->
+                <div class="caircarriage"></div>
+            </div>
+
+
+        </div>
+        <div class="cacheway">
+            <div class="cachewayfl">
+                <div class="cachewayfl1"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- 汽车缓存 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        var wsm = 0
+        $(".roundness").click(function () {
+            wsm++
+            if (wsm == 1) {
+                $(".roundnesssvg").addClass("xzhuan")
+                $(".fl").addClass("xx")
+                $(".jz").addClass("yy")
+                $(".fr").addClass("hh")
+            } else {
+                $(".roundnesssvg").removeClass("xzhuan")
+                $(".fl").removeClass("xx")
+                $(".jz").removeClass("yy")
+                $(".fr").removeClass("hh")
+            }
+            if (wsm >= 2) {
+                wsm = 0
+            }
+            // console.log(wsm);
+        })
+        // 1
+        // 加载按钮
+        var x = 0
+        $(".backbth").click(function () {
+            x++
+            $(".wire").css("opacity", 1)
+            $(".car").css("opacity", 1)
+            $(".car").addClass("fad")
+            $(".wire").addClass("kas")
+            $("p").css("opacity", 0)
+
+            $(function () {
+                setInterval(showTime, 6700);
+                function showTime() {
+                    var today = new Date();
+                    $(".pfr").addClass("pfrfd").css("opacity", 1)
+                }
+            })
+        })
+
+    </script>
+</body>
+
+</html>

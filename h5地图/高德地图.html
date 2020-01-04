@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+</head>
+
+<body>
+    <img src="" class="map" alt="" />
+    <iframe src="" frameborder="0" width="100%" height="500"></iframe>
+    <div class="demo"></div>
+    <script>
+        navigator.geolocation.watchPosition(
+            function (position) {
+                console.log(position);
+
+
+                document.querySelector("iframe").src =
+                    "https://uri.amap.com/marker?position=" +
+                    position.coords.longitude +
+                    "," + 
+                    position.coords.latitude;
+                document.querySelector(".demo").innerText =
+                    position.coords.longitude + " " + position.coords.latitude;
+            },
+            function (error) {
+                console.log(error);
+            }
+        );
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,764 @@
+body {
+	transform-style: preserve-3d;
+}
+.bth {
+	// width: 500px;
+	height: 350px;
+	margin: 10px auto;
+	background: #232e6d;
+	padding-left: 150px;
+	padding-top: 50px;
+	ul {
+		margin: 0 auto;
+		width: 300px;
+		height: 250px;
+		background: #232e6d;
+		list-style: none;
+		padding: 0;
+		padding-top: 50px;
+		li {
+			margin: 100px 6px;
+			width: 20px;
+			height: 20px;
+			background: fuchsia;
+			float: left;
+			border-radius: 20px;
+			animation: sb 3s infinite;
+			// animation-iteration-count: infinite;
+			// transform: scaleY(0);
+			&:nth-child(2) {
+				margin: 100px 6px;
+				width: 20px;
+				height: 20px;
+				background: #f45330;
+				float: left;
+				border-radius: 20px;
+				animation: sb2 3s infinite;
+				animation-delay: 0.2s;
+			}
+			&:nth-child(3) {
+				margin: 100px 6px;
+				width: 20px;
+				height: 20px;
+				background: #ffc883;
+				float: left;
+				border-radius: 20px;
+				animation: sb3 3s infinite;
+				animation-delay: 0.4s;
+			}
+			&:nth-child(4) {
+				margin: 100px 6px;
+				width: 20px;
+				height: 20px;
+				background: #30d268;
+				float: left;
+				border-radius: 20px;
+				animation: sb4 3s infinite;
+				animation-delay: 0.6s;
+			}
+			&:nth-child(5) {
+				margin: 100px 6px;
+				width: 20px;
+				height: 20px;
+				background: #006cb4;
+				float: left;
+				border-radius: 20px;
+				animation: sb5 3s infinite;
+				animation-delay: 0.8s;
+			}
+			&:nth-child(6) {
+				margin: 100px 6px;
+				width: 20px;
+				height: 20px;
+				background: #784697;
+				float: left;
+				border-radius: 20px;
+				animation: sb4 3s infinite;
+				animation-delay: 1s;
+			}
+			&:nth-child(7) {
+				margin: 100px 6px;
+				width: 20px;
+				height: 20px;
+				background: #ffc883;
+				float: left;
+				border-radius: 20px;
+				animation: sb3 3s infinite;
+				animation-delay: 1.2s;
+			}
+			&:nth-child(8) {
+				margin: 100px 6px;
+				width: 20px;
+				height: 20px;
+				background: #f45330;
+				float: left;
+				border-radius: 20px;
+				animation: sb2 3s infinite;
+				animation-delay: 1.4s;
+			}
+			&:nth-child(9) {
+				margin: 100px 6px;
+				width: 20px;
+				height: 20px;
+				background: #f62e74;
+				float: left;
+				border-radius: 20px;
+				animation: sb 3s infinite;
+				animation-delay: 1.6s;
+			}
+		}
+	}
+}
+
+@keyframes sb {
+	30%,
+	50% {
+		transform: translateY(-30px);
+		height: 70px;
+	}
+	75%,
+	100% {
+		transform: translateY(0);
+		height: 20px;
+	}
+}
+@keyframes sb2 {
+	30%,
+	50% {
+		transform: translateY(-50px);
+		height: 110px;
+	}
+	75%,
+	100% {
+		transform: translateY(0);
+		height: 20px;
+	}
+}
+@keyframes sb3 {
+	30%,
+	50% {
+		transform: translateY(-70px);
+		height: 150px;
+	}
+	75%,
+	100% {
+		transform: translateY(0);
+		height: 20px;
+	}
+}
+@keyframes sb4 {
+	30%,
+	50% {
+		transform: translateY(-50px);
+		height: 170px;
+	}
+	75%,
+	100% {
+		transform: translateY(0);
+		height: 20px;
+	}
+}
+@keyframes sb5 {
+	30%,
+	50% {
+		transform: translateY(-30px);
+		height: 170px;
+	}
+	75%,
+	100% {
+		transform: translateY(0);
+		height: 20px;
+	}
+}
+// 第一个项目
+.options {
+	width: 300px;
+	height: 100px;
+	margin: 200px auto;
+	background: gainsboro;
+	position: relative;
+	ul {
+		width: 100%;
+		height: 100%;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		// background: #232e6d;
+		position: absolute;
+		top: 0;
+		li {
+			position: absolute;
+			top: 13%;
+			left: 13%;
+			width: 60px;
+			height: 60px;
+			border-radius: 50%;
+			transition: all 1s;
+		}
+	}
+	.roundness {
+		position: absolute;
+		top: -50%;
+		left: 31%;
+		width: 100px;
+		height: 100px;
+		border-radius: 50%;
+		background: rgba(128, 128, 241, 0.925);
+		// overflow: hidden;
+		transform: scale(0.8);
+		border: 10px solid white;
+		// position: relative;
+		z-index: 2;
+		.roundnesssvg {
+			width: 100%;
+			height: 100%;
+			transition: all 1s;
+		}
+	}
+}
+.xzhuan {
+	transform: rotateZ(136deg);
+	// background: cyan;
+	border-radius: 50px;
+}
+.xx {
+	transform: translate(-60px, -60px);
+	background: #30d268;
+}
+.yy {
+	transform: translate(7px, -90px);
+	background: violet;
+}
+.hh {
+	transform: translate(75px, -60px);
+	background: cornflowerblue;
+}
+// 幽灵按钮
+.backbth {
+	width: 300px;
+	height: 55px;
+	background: rgb(5, 5, 71);
+	border-radius: 40px;
+	margin: 100px auto;
+	padding-top: 15px;
+	position: relative;
+	overflow: hidden;
+	p {
+		position: absolute;
+		top: 9px;
+		left: 0;
+		color: white;
+		text-align: center;
+		opacity: 1;
+		transition: all 0.3s;
+		width: 100%;
+		height: 100%;
+		background: rgb(5, 5, 71);
+	}
+	.pfr {
+		position: absolute;
+		top: 0;
+		left: 0;
+		color: white;
+		text-align: center;
+		opacity: 0;
+		transition: all 0.3s;
+		width: 100%;
+		height: 100%;
+		background: rgb(5, 5, 71);
+		z-index: 2;
+		line-height: 60px;
+	}
+	.wire {
+		position: absolute;
+		top: 50%;
+		right: -901px;
+		width: 900px;
+		height: 1px;
+		border-top: dashed yellow 5px;
+		z-index: 0;
+		transform: translate(1px);
+		// display: none;
+		animation-delay: 0.5s;
+		// animation-timing-function: ease-in-out;
+		opacity: 0;
+	}
+	.car {
+		position: absolute;
+		left: 20px;
+		width: 87px;
+		height: 41px;
+		margin-left: 30px;
+		z-index: 1;
+		transform: translate(-10px);
+		animation-iteration-count: linear;
+		opacity: 0;
+		.carhead {
+			height: 41px;
+			width: 90px;
+			float: left;
+			background: blue;
+			margin-left: 2px;
+			border-radius: 5px;
+			position: relative;
+			z-index: 1;
+			.carlightfl {
+				position: absolute;
+				right: 0;
+				top: 7px;
+				width: 3px;
+				height: 7px;
+				float: right;
+				background: yellow;
+			}
+			.carlightfr {
+				position: absolute;
+				right: 0;
+				top: 26px;
+				width: 3px;
+				height: 7px;
+				background: yellow;
+				float: right;
+			}
+			.carwindow {
+				position: absolute;
+				top: 0;
+				right: 12px;
+				height: 100%;
+				width: 17px;
+				background: black;
+				border-radius: 0 10px 10px 0;
+				overflow: hidden;
+				float: right;
+				.navcar {
+					height: 100%;
+					width: 8px;
+					background: cadetblue;
+				}
+			}
+			.carbody {
+				width: 60px;
+				height: 41px;
+				background-image: linear-gradient(to bottom left, white, rgba(255, 255, 255, 0.473));
+				border-radius: 7px;
+				float: left;
+			}
+		}
+	}
+}
+@keyframes acr {
+	0% {
+		transform: translate(-10px);
+	}
+	40% {
+		transform: translate(100px);
+	}
+	60% {
+		transform: translate(40px);
+	}
+	100% {
+		transform: translate(250px);
+	}
+}
+@keyframes xian {
+	0% {
+		transform: translate(1px);
+	}
+	100% {
+		transform: translate(-1300px);
+	}
+}
+.fad {
+	animation: acr 7s;
+}
+.kas {
+	animation: xian 9s;
+}
+.pfrfd {
+	animation-delay: 10s;
+}
+// 翻牌子
+.content {
+	width: 1200px;
+	height: 480px;
+	background: linear-gradient(-45deg, #111213, #4b4d4b);
+	margin: 0 auto;
+	margin-bottom: 100px;
+	perspective: 1000px;
+	text-align: center;
+	img {
+		width: 50px;
+		height: 50px;
+	}
+	h1 {
+		transform-style: preserve-3d;
+		color: white;
+		font-size: 20px;
+		transform: translateZ(30px);
+	}
+	.contentfll {
+		height: 400px;
+		width: 250px;
+		// background: royalblue;
+		margin: 50px;
+		float: left;
+		margin-left: 88px;
+		transition: all 1s;
+
+		&:hover .contentfl {
+			transform: rotateY(180deg);
+		}
+		.contentfl {
+			height: 400px;
+			width: 250px;
+			background: linear-gradient(-45deg, #464734, #8f8e41);
+			float: left;
+			transition: all 1s;
+			transform-style: preserve-3d;
+			position: relative;
+			border-radius: 5px;
+			.kais {
+				position: absolute;
+				top: 55%;
+				left: 20%;
+				width: 150px;
+				background: linear-gradient(-45deg, #585a2c, #706f29);
+				border-radius: 20px;
+				text-align: center;
+				line-height: 45px;
+				transform: translateZ(-30px) rotateY(180deg);
+				&:hover {
+					top: 54%;
+					transition: all 0.2s;
+				}
+			}
+		}
+	}
+	.contentflll {
+		height: 400px;
+		width: 250px;
+		// background: royalblue;
+		margin: 50px;
+		float: left;
+		transition: all 1s;
+		margin-left: 110px;
+		position: relative;
+		border-radius: 5px;
+		&:hover .contentfll {
+			transform: rotateY(180deg);
+		}
+		.contentfll {
+			position: absolute;
+			top: -49px;
+			left: -126px;
+			height: 400px;
+			width: 250px;
+			background: linear-gradient(-45deg, #595f5d, #f2f1f3);
+			transition: all 1s;
+			border-radius: 5px;
+			transform-style: preserve-3d;
+			position: relative;
+			border-radius: 5px;
+			.kais {
+				position: absolute;
+				top: 55%;
+				left: 20%;
+				width: 150px;
+				background: linear-gradient(-45deg, #6c6b6d, #aeafb1);
+				border-radius: 20px;
+				text-align: center;
+				line-height: 45px;
+				transform: translateZ(-30px) rotateY(180deg);
+				&:hover {
+					top: 54%;
+					transition: all 0.2s;
+				}
+			}
+		}
+	}
+	.contentfllll {
+		height: 400px;
+		width: 250px;
+		// background: royalblue;
+		margin: 50px;
+		float: left;
+		transition: all 1s;
+		position: relative;
+		&:hover .contentflll {
+			transform: rotateY(180deg);
+		}
+		.contentflll {
+			position: absolute;
+			top: -49px;
+			left: -126px;
+			height: 400px;
+			width: 250px;
+			background: linear-gradient(-45deg, #c2b227, #ebd82c);
+			transition: all 1s;
+			border-radius: 5px;
+			transform-style: preserve-3d;
+			position: relative;
+			border-radius: 5px;
+			.kais {
+				position: absolute;
+				top: 55%;
+				left: 20%;
+				width: 150px;
+				background: linear-gradient(-45deg, #8b7f0b, #f7e92c);
+				border-radius: 20px;
+				text-align: center;
+				line-height: 45px;
+				transform: translateZ(-30px) rotateY(180deg);
+				&:hover {
+					top: 54%;
+					transition: all 0.2s;
+				}
+			}
+		}
+	}
+}
+// 车
+.cache {
+	width: 180px;
+	height: 180px;
+	border-radius: 50%;
+	background: cornflowerblue;
+	margin: 150px auto;
+	overflow: hidden;
+	border: 4px solid #1dd3d6;
+	// box-shadow: inset 0px 0px 10px 4px rgba(0,0,0,0.3), inset 0px 0px 5px 0px #1DD3D6;
+	.cachecai {
+		width: 180px;
+		height: 120px;
+		background: white;
+		position: relative;
+		.cair {
+			width: 100px;
+			height: 80px;
+			// background: red;
+			position: absolute;
+			top: 47px;
+			left: 40px;
+			position: relative;
+			.cairwheelfl {
+				width: 15px;
+				height: 15px;
+				border-radius: 50%;
+				background: cadetblue;
+				overflow: hidden;
+				position: absolute;
+				top: 60px;
+				left: 15px;
+				animation: caif 0.9s infinite;
+				animation-timing-function: linear;
+				.cairwheelflyyk {
+					width: 20px;
+					background: rgba(0, 0, 0, 0.38);
+					height: 10px;
+					margin: -7px auto;
+				}
+				.cairwheelflls {
+					width: 7px;
+					background: white;
+					height: 7px;
+					margin: 4px auto;
+					border-radius: 50%;
+				}
+			}
+			.cairwheelfr {
+				width: 15px;
+				height: 15px;
+				border-radius: 50%;
+				background: cadetblue;
+				overflow: hidden;
+				position: absolute;
+				top: 60px;
+				left: 65px;
+				animation: caif 0.7s infinite;
+				animation-timing-function: linear;
+				.cairwheelfrls {
+					width: 7px;
+					background: white;
+					height: 7px;
+					margin: 4px auto;
+					border-radius: 50%;
+				}
+				.cairwheelfryyk {
+					width: 20px;
+					background: rgba(0, 0, 0, 0.38);
+					height: 10px;
+					margin: -7px auto;
+				}
+			}
+			.cairFrame {
+				width: 80px;
+				height: 8px;
+				background: rgb(43, 42, 42);
+				position: absolute;
+				top: 52px;
+				left: 11px;
+				border-bottom-right-radius: 5px;
+				border-bottom-left-radius: 5px;
+				animation: caiFrame 2s infinite;
+				animation-timing-function: linear;
+				overflow: hidden;
+				.cairFrametg {
+					width: 4px;
+					height: 8px;
+					background: #e54a18;
+					float: left;
+				}
+				.cairFramehd {
+					width: 16px;
+					height: 8px;
+					background: rgba(255, 255, 255, 0.18);
+					float: right;
+				}
+			}
+			.cairguard {
+				width: 78px;
+				height: 6px;
+				background: #f9bf2c;
+				position: absolute;
+				top: 47px;
+				left: 11px;
+				animation: caiguard 2s infinite;
+				animation-timing-function: linear;
+				overflow: hidden;
+				.cairbar {
+					width: 19px;
+					height: 4px;
+					background: rgb(43, 42, 42);
+					position: absolute;
+					top: 3px;
+					left: 45px;
+					border-top-right-radius: 3px;
+				}
+				.cairlamp {
+					width: 5px;
+					height: 5px;
+					background: rgb(243, 211, 200);
+					position: absolute;
+					top: 2px;
+					right: 0;
+					border-top-left-radius: 3px;
+				}
+			}
+			.cairheadstock {
+				width: 30px;
+				height: 27px;
+				position: absolute;
+				top: 20px;
+				right: 12px;
+				// background: blue;
+				animation: tock 1s infinite;
+				animation-timing-function: linear;
+				.cairdoor {
+					width: 25px;
+					height: 28px;
+					position: absolute;
+					top: 5px;
+					left: 0;
+					background: #f9bf2c;
+					border-top-right-radius: 5px;
+				}
+				.cairdoorfr {
+					width: 5px;
+					height: 10px;
+					background: #f9bf2c;
+					position: absolute;
+					top: 17px;
+					right: 0;
+					border-top-right-radius: 5px;
+				}
+				.cairwindow {
+					width: 20px;
+					height: 20px;
+					position: absolute;
+					top: 8px;
+					left: 2px;
+					background: linear-gradient(-45deg, #1277b1, #141d92);
+					border-top-right-radius: 5px;
+				}
+			}
+		}
+	}
+
+	.cacheway {
+		width: 180px;
+		height: 60px;
+		background: #1dd3d6;
+
+		.cachewayfl {
+			width: 180px;
+			height: 100%;
+			float: left;
+			animation: cacheway 1s infinite;
+			animation-timing-function: linear;
+			.cachewayfl1 {
+				width: 20%;
+				height: 100%;
+				background: coral;
+				background: linear-gradient(-45deg, #1dd3d6, rgb(62, 223, 226));
+			}
+		}
+	}
+	.caircarriage {
+		width: 43px;
+		height: 29px;
+		background: rgba(92, 91, 91, 0.521);
+		position: absolute;
+		top: 16px;
+		left: 12px;
+		animation: caircarriage 1s infinite;
+		animation-timing-function: linear;
+		
+	}
+}
+@keyframes caircarriage {
+	from {
+	}
+	to {
+		width: 44px;
+		transform: rotate(-2deg);
+		height: 30px;
+	}
+}
+@keyframes cacheway {
+	from {
+		transform: translateX(200px);
+	}
+	to {
+		transform: translateX(0px);
+	}
+}
+@keyframes caif {
+	from {
+		transform: rotate(0);
+	}
+	to {
+		transform: rotate(360deg);
+		top: 58px;
+	}
+}
+@keyframes caiFrame {
+	from {
+	}
+	to {
+		top: 51px;
+	}
+}
+@keyframes caiguard {
+	from {
+	}
+	to {
+		top: 46px;
+	}
+}
+@keyframes tock {
+	from {
+	}
+	to {
+		top: 19px;
+	}
+}
